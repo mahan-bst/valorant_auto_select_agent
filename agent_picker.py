@@ -6,8 +6,8 @@ from cv2 import cv2
 LOCK_POS = [900, 850]
 raze = 'img/raze.png'
 phonix = 'img/phonix.png'
-
-selec_agent = input('plz select ur agent : phonix, raze \n')
+omen = "img/omen.png"
+selec_agent = input('plz select ur agent : phonix, raze, omen \n')
 
 
 while True:
@@ -27,9 +27,10 @@ while True:
         pyautogui.click(pos[0], pos[1])
         pyautogui.click(pos[0], pos[1])
         pyautogui.click(pos[0], pos[1])
+        time.sleep(0.5)
+        pyautogui.moveTo(LOCK_POS[0], LOCK_POS[1])
         time.sleep(0.1)
-        pyautogui.click(LOCK_POS[0], LOCK_POS[1])
-        pyautogui.click(LOCK_POS[0], LOCK_POS[1])
-        pyautogui.click(LOCK_POS[0], LOCK_POS[1])
-        pyautogui.click(LOCK_POS[0], LOCK_POS[1])
+        pyautogui.click()
+        time.sleep(0.1)
+        pyautogui.click()
         break
